@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="pdfkit-page-size" content="A4" />
+    <meta name="pdfkit-orientation" content="Landscape" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.9.0/html-to-image.min.js"
+        integrity="sha512-hI+X0tF436khDUBN21w65R/x9r74gU8e8OpL6T8JFsEFUtIT8L+YAPj5iGFex9IC7pmqGlA0KhxlDFSAckxeaw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <style>
+        body {
+            background-color: white;
+        }
+
+        #mainContainer2 {
+            opacity: 1;
+        }
+
+        #certificateImgTage {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .mainContainer {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+        }
+
+        .imgContainer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-image: url('https://lnd.iec.org.pk/api/static/images/certificate.svg');
+            background-repeat: no-repeat;
+            height: 786px;
+            width: 1066px;
+            background-color: white;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12pt;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            overflow: visible;
+            color: #4E87B3;
+            position: absolute;
+            top: 29%;
+            left: 14%;
+        }
+
+        .name {
+            font-family: 'Montserrat', sans-serif;
+            white-space: nowrap;
+            overflow: visible;
+
+            font-size: 34pt;
+            letter-spacing: 2px;
+            color: #434340;
+            position: absolute;
+            top: 38%;
+            left: 14%;
+
+        }
+
+        .courseName {
+            font-family: 'Montserrat', sans-serif;
+            white-space: nowrap;
+            overflow: visible;
+            font-size: 16pt;
+            letter-spacing: 3px;
+            color: #305775;
+            position: absolute;
+            top: 51.8%;
+            left: 14%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mainContainer" id="mainContainer2">
+
+        <!-- <img src="" class="" alt="Certificate" id="certificateImgTage" /> -->
+        <div id="certificateImage" class="imgContainer">
+            <h4 class="date">{{student.date}}</h4>
+            <h1 class="name">{{student.name}}</h1>
+
+            <h2 class="courseName">"{{student.courseName | upper}} COURSE"</h2>
+        </div>
+
+
+    </div>
+
+    <!-- <script>
+
+        var node = document.getElementById('certificateImage');
+        var imgTag = document.getElementById('certificateImgTage');
+
+        toPng(node)
+            .then(function (dataUrl) {
+                console.log("UseEffect Worked")
+                imgTag.src = dataUrl;
+                document.getElementById('certificateImage').style.display = "none";
+                // document.getElementById('mainContainer2').appendChild(img);
+                document.getElementById('mainContainer2').style.opacity = "1";
+
+                //const pdf = new jsPDF();
+
+                // pdf.addImage(dataUrl, 'PNG', 10, 10, 180, 150);
+
+                // pdf.save("download.pdf");
+            })
+            .catch(function (error) {
+                console.error('oops, something went wrong!', error);
+            });
+    </script> -->
+</body>
+
+</html>

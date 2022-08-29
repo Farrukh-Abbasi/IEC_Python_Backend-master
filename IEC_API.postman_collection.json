@@ -1,0 +1,123 @@
+{
+	"variables": [],
+	"info": {
+		"username": "Charles_API",
+		"_postman_id": "ad72e39d-b26c-6396-fc19-c23fd7c4de50",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"username": "Create User request",
+			"request": {
+				"url": "http://127.0.0.1:5000/api/create_user",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI5ZWJhNDA4Mi1mMmI3LTQ0OTEtOGQxYy05YTYyNjZjMDA2YmIiLCJleHAiOjE2MzcwMzg2MDN9.brIWPdHeiw_tiqC1RQY9K4oc0OhW5X41QfPugpbtptg",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"akhlaq\",\n\t\"password\":\"akhlaq\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"username": "Get All Users",
+			"request": {
+				"url": "http://127.0.0.1:5000/api/users",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI5ZWJhNDA4Mi1mMmI3LTQ0OTEtOGQxYy05YTYyNjZjMDA2YmIiLCJleHAiOjE2MzcwMzg2MDN9.brIWPdHeiw_tiqC1RQY9K4oc0OhW5X41QfPugpbtptg",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"username": "Generate Token / Login",
+			"request": {
+				"url": "http://127.0.0.1:5000/api/login",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46YWRtaW4=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"username": "Delete a User",
+			"request": {
+				"url": "http://127.0.0.1:5000/api/user/46767273-7cef-4c5f-9055-a82aff3da99e",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI5ZWJhNDA4Mi1mMmI3LTQ0OTEtOGQxYy05YTYyNjZjMDA2YmIiLCJleHAiOjE2MzcwMzg2MDN9.brIWPdHeiw_tiqC1RQY9K4oc0OhW5X41QfPugpbtptg",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"username": "Scan Text",
+			"request": {
+				"url": "http://127.0.0.1:5000/api/scan_text",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiI3YTYyZTE1Yy0wMGYwLTQ3MzEtYjAyMS1jNjE4ZTY4YmQ0YmQiLCJleHAiOjE2MzcwMzU5Njl9.tDFqql30ytjV_hsVOry-bTROMk7ZVRDThXaBnaFiyew",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"text1\":\"hello world\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"username": "API HELP",
+			"request": {
+				"url": "http://127.0.0.1:5000/api/help",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
