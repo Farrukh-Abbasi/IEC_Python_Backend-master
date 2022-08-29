@@ -7,7 +7,6 @@ app = Flask(__name__, static_url_path='/api/static')
 # app.SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://akhlaq:akhlaq_1010@localhost/learning'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test2.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
